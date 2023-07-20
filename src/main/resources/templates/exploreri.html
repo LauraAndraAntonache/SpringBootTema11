@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tema 11: Serving Web Content MVC </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<table>
+	    <thead>
+	        <tr>
+	            <th> Nume </th>
+	            <th> Prenume </th>
+	            <th> Oras </th>
+	            <th> Varsta </th>
+	        </tr>
+	    </thead>
+	    <tbody>
+			<tr th:if="${exploreri.empty}">
+	            <td colspan="2"> No Explorers Available </td>
+	        </tr>
+	        <tr th:each="exp : ${exploreri}">
+	            <td><span th:text="${exp.nume}"> Nume </span></td>
+	            <td><span th:text="${exp.prenume}"> Prenume </span></td>
+	           	<td><span th:text="${exp.oras}"> Oras </span></td>
+	            <td><span th:text="${exp.varsta}"> Varsta </span></td>
+	        </tr>
+	    </tbody>
+	</table>
+</body>

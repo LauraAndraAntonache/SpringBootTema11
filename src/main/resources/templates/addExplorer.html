@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Tema 11: Serving Web Content MVC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<form action="#" th:action="@{/createExplorer}" th:object="${explorer}"
+	method="post">
+	<fieldset>
+		<input type="submit" id="submitButton" th:value="Save">
+		<table>
+			<thead>
+				<tr>
+					<th>Nume</th>
+					<th>Prenume</th>
+					<th>Oras</th>
+					<th>Varsta</th>
+					<th>Casatorita</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input th:field="*{nume}" /></td>
+					<td><input th:field="*{prenume}" /></td>
+					<td><input th:field="*{oras}" /></td>
+					<td><input th:field="*{varsta}" /></td>
+					<td><input th:field="*{casatorita}" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>
